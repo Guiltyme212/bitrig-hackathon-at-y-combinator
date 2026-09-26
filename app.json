@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Kokoro · Orb",
+    "slug": "kokoro-orb-onboarding",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.kokoro.orb.demo"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "com.kokoro.orb.demo"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "name": "Kokoro · A little space for you",
+      "themeColor": "#000000",
+      "backgroundColor": "#000000",
+      "output": "server"
+    },
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Kokoro listens while you talk to the orb, so it can shape your meditation around what you say.",
+          "enableBackgroundPlayback": false,
+          "enableBackgroundRecording": false
+        }
+      ],
+      "expo-video",
+      "expo-router",
+      "expo-image"
+    ],
+    "scheme": "kokoro-orb",
+    "backgroundColor": "#000000"
+  }
+}

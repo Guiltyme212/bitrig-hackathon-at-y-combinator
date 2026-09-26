@@ -2,6 +2,8 @@
 .env
 .env.*
 !.env.example
+.revenuecat.local.json
+.env.revenuecat-admin.local
 *.pem
 *.p12
 *.mobileprovision
@@ -10,6 +12,9 @@
 # Local notes and caches
 .local/
 .cache/
+private/
+qa/
+.duo-*
 .DS_Store
 *.log
 
@@ -27,6 +32,8 @@ Pods/
 .build/
 xcuserdata/
 *.xcuserstate
+/ios/
+/android/
 
 # Local agent and editor settings
 .claude/

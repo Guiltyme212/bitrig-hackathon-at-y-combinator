@@ -1,53 +1,25 @@
-# Kokoro for iPhone Duo
+# Duo demo plan
 
-Ship one complete, dependable experience: choose a session, unfold into it, listen, and fold back without losing your place.
+Deliver one complete flow: choose a voice, make a session, unfold into it, then close without losing progress.
 
-## 1. Prove the device interaction
+## Current implementation
 
-- Run a minimal app in the Duo simulator. Confirm outer and inner display layouts, live hinge updates, and reserved regions for the fold and camera.
-- Test opening, closing, reversing halfway, and rotating. Keep session state outside the views that change with the device pose.
-- Choose the runtime after this check. SwiftUI is the leading option for direct Duo API access. A React Native route needs a native build that proves hinge access and full display support; Expo Go alone is not enough evidence.
+- Expo / React Native app with compact, closed, open landscape and open portrait layouts.
+- Shared state and player ownership across changes in Duo geometry.
+- Orb, voice selection, conversational onboarding, session preparation and playback.
+- Bundled audio for a dependable demo path.
+- Isolated native bundle ID and development server on port 8090.
+- Browser pose controls that retain the same mounted app session.
 
-Done when the same session identifier and playback position survive repeated fold changes. Do this before building more screens.
+## Finish in this order
 
-## 2. Build the unfolding moment
+1. Run the native build on the Duo simulator and check the complete onboarding-to-player flow.
+2. Open and close during name entry and playback. Check that answers, selected voice, elapsed time and play/pause state survive. Repeat ten times, including rapid reversals.
+3. Add and verify a native hinge-angle bridge if continuous unfolding motion is required. Current window-based layout changes do not prove hinge tracking or half-open behavior.
+4. Confirm portrait, landscape, safe areas, text readability, Reduce Motion and the compact phone fallback.
+5. Check microphone denial, offline fallback, background/foreground and completion. Verify the native live-service endpoint separately from the bundled demo.
+6. Rehearse a short demo: closed orb, choose a voice, unfold, start playback, close while it continues.
 
-Proposed direction for review:
+The fold should change presentation, never request another session or restart audio. Keep one player owner across poses. Defer extra features until this sequence is dependable.
 
-- Closed: an orb and one clear action to enter a session.
-- Opening: the orb expands with the hinge into the inner display. Reversing the fold reverses the transition without a jump.
-- Open: a quiet session view with reachable playback controls. Keep text and buttons clear of the fold and camera.
-- Half-open: support a hands-free pose if it fits the demo time. Keep the orb above and controls below.
-- Closing: return to the compact view with playback and progress intact.
-
-Opening the device must not restart playback, generate another session, or request microphone access. Respect Reduce Motion. A phone without a hinge gets a complete compact flow.
-
-## 3. Complete one session
-
-- Choose a session, start it, pause and resume, and reach completion.
-- Use one player owner across display changes. Fold events affect presentation, not audio lifetime.
-- Show clear loading and error states. Prevent duplicate requests from repeated taps.
-- Provide a bundled demo session so the core demonstration works without a network connection. Identify it as a demo if live generation is unavailable.
-- Keep provider credentials on the server and out of the app bundle.
-
-## 4. Rehearse the demo
-
-- Launch from a stopped app on Duo and a normal iPhone.
-- Finish the compact flow without layout clipping or blocked controls.
-- Repeat open/close ten times during playback, including a reversal halfway through.
-- Check portrait, landscape, half-open, background/foreground, pause/resume, and completion.
-- Check microphone denial and loss of network without a crash or a dead end.
-- Record a short demo showing the actual fold interaction and continuous playback.
-
-Simulator checks prove software behavior. Physical-device audio and haptics need a separate check when hardware is available.
-
-## Keep the scope small
-
-First demo: one compact flow, one unfolding transition, one working session, and a reliable fallback. Defer accounts, subscriptions, a large library, and extra onboarding screens.
-
-Use feature branches. Keep `main` runnable once the app is added, and merge only after checking both compact and Duo layouts.
-
-## References
-
-- [Bitrig's Duo support and native APIs](https://bitrig.com/blog/bitrig-builds-iphone-duo-apps)
-- [Bitrig Hacks: iPhone Duo Edition](https://luma.com/yc-meetup-4378)
+Simulator results establish software behavior. Check speaker/headphone output, haptics and physical fold feel on hardware when available.

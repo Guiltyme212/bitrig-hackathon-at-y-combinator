@@ -1,0 +1,11 @@
+{
+  "provider": "ElevenLabs",
+  "input": {
+    "prompt": "A quietly beautiful instrumental soundscape for an intimate meditation onboarding. 90 seconds. Slow spacious felt piano notes, warm rounded glass marimba, airy soft synth harmonics and subtle evolving chords. Starts with two seconds of near silence and a soft gentle swell. Harmonically develops every 12 seconds, a feeling of coming home and possibility, delicate suspended notes and deep warmth. No static drone, no repetitive high tone, no percussion beat, no vocals, no breathing or water sounds, no hiss, no sharp bell attack, no cinematic tension. Understated modern luxury, soothing and contemplative. Smooth ending into silence.",
+    "music_length_ms": 90000,
+    "model_id": "music_v2",
+    "force_instrumental": true
+  },
+  "generatedAt": "2026-09-18T10:55:02.023Z",
+  "bytes": 1440750
+}

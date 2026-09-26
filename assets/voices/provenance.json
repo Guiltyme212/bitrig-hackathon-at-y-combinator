@@ -1,0 +1,195 @@
+{
+  "note": "Bundled voice auditions and demo sessions with approved music pairings. Provider and source metadata are recorded per voice.",
+  "generatedBy": "scratchpad voices/prep.py",
+  "voices": [
+    {
+      "voice": "Brittney",
+      "voiceId": "pjcYQlDFKMbcOUp6F5GD",
+      "model": "eleven_v3",
+      "audition": {
+        "sourceTrack": "r2-09",
+        "start": 23.05,
+        "end": 31.35,
+        "words": "Take a seat. Let your shoulders drop if they want to. You can leave your eyes open.",
+        "processing": "voice stem only, loudnorm I=-19 TP=-2, 0.12s/0.55s fades, mono 96k"
+      },
+      "session": {
+        "sourceTrack": "r2-09",
+        "title": "Free pizza",
+        "music": "Quiet ambient jazz, Rhodes",
+        "ratings": {
+          "voice": "good",
+          "delivery": "good",
+          "music": "good",
+          "fit": "good"
+        },
+        "savedMix": {
+          "voice": 100,
+          "music": 100,
+          "duck": true
+        },
+        "duckFloor": 0.447,
+        "timeline": [
+          {
+            "start": 8,
+            "end": 37.905,
+            "text": "Okay. You're in San Francisco, you're trying to build something, and some of your networking strategy involves pizza.  That's a fairly understandable response to being hungry. Take a seat. Let your shoulders drop if they want to. You can leave your eyes open. For a minute, you don't have to turn this moment into a story about whether you belong here."
+          },
+          {
+            "start": 49.905,
+            "end": 86.416,
+            "text": "Notice what you feel when you stop defending yourself. Maybe relief. Maybe the same worry. Maybe you're still hungry. Let it be ordinary. Feel your feet against the floor and your hands resting. You can take your situation seriously without reviewing your entire character over a paper plate. Let that thought settle, and give yourself a little space."
+          },
+          {
+            "start": 108.416,
+            "end": 142.223,
+            "text": "When you're ready, consider what would make tomorrow a bit more workable. It might mean going to an event with a reason, skipping one, or making time to eat before you get there. You get to choose. For now, take another comfortable breath. Feel the room around you. There's time to stand up when the music finishes."
+          }
+        ],
+        "duration": 180.0,
+        "processing": "voice mono 64k, music 96k; mixed live in the app with the listening room duck curve"
+      }
+    },
+    {
+      "voice": "Natasha",
+      "voiceId": "Atp5cNFg1Wj5gyKD7HWV",
+      "model": "eleven_v3",
+      "audition": {
+        "sourceTrack": "r2-05",
+        "start": 7.85,
+        "end": 17.0,
+        "words": "Get comfortable and notice your breathing as it is. No big breath needed.",
+        "processing": "voice stem only, loudnorm I=-19 TP=-2, 0.12s/0.55s fades, mono 96k"
+      },
+      "session": {
+        "sourceTrack": "r2-05",
+        "title": "Room to breathe",
+        "music": "Soft ocean textures, warm synth",
+        "ratings": {
+          "voice": "good",
+          "delivery": "good",
+          "music": "good"
+        },
+        "savedMix": {
+          "voice": 95,
+          "music": 78,
+          "duck": true
+        },
+        "duckFloor": 0.28,
+        "timeline": [
+          {
+            "start": 8,
+            "end": 46.96,
+            "text": "Get comfortable and notice your breathing as it is. No big breath needed. You can keep your eyes open. If paying attention to breathing feels uncomfortable, feel your feet instead. Let one ordinary breath come in. Then see if the breath out can be a little less hurried. No holding. No pushing. Try that at your own pace."
+          },
+          {
+            "start": 58.96,
+            "end": 93.84,
+            "text": "Let the next breath arrive when your body wants it. Give the exhale a little room, only if that feels easy. The music can stay in the background; you don't need to match it. If you feel lightheaded or strained, return to your usual breathing. For the next little while, follow a rhythm that feels comfortable to you."
+          },
+          {
+            "start": 115.84,
+            "end": 149.2,
+            "text": "Let your breathing take care of itself again. Notice the support beneath you. There may still be emails waiting, and there may still be uncertainty. You have a moment here before you return to them. Feel your hands. Look around the room. When you're ready, move slowly into whatever comes next."
+          }
+        ],
+        "duration": 180.0,
+        "processing": "voice mono 64k, music 96k; mixed live in the app with the listening room duck curve"
+      }
+    },
+    {
+      "voice": "Brad",
+      "voiceId": "HZTk7bUIkiI7yT7FKH4h",
+      "model": "eleven_v3",
+      "audition": {
+        "sourceTrack": "r2-08",
+        "start": 7.85,
+        "end": 16.0,
+        "words": "Put down whatever you’re working on for a moment. Feel your hands resting.",
+        "processing": "voice stem only, loudnorm I=-19 TP=-2, 0.12s/0.55s fades, mono 96k"
+      },
+      "session": {
+        "sourceTrack": "r2-06",
+        "title": "Your part",
+        "music": "Nocturnal ambient, distant electric piano",
+        "ratings": {
+          "voice": "good",
+          "delivery": "good",
+          "music": "good",
+          "fit": "unsure"
+        },
+        "savedMix": {
+          "voice": 95,
+          "music": 115,
+          "duck": true
+        },
+        "duckFloor": 0.28,
+        "timeline": [
+          {
+            "start": 8,
+            "end": 36.333,
+            "text": "Let your feet settle on the floor. You want to get into Y Combinator. Let yourself want that, without pretending it doesn't matter. Notice what happens in your chest or stomach when you think about the decision. You can breathe normally while that feeling is here. You don't need to rehearse the answer right now."
+          },
+          {
+            "start": 48.333,
+            "end": 82.582,
+            "text": "Consider one thing you can influence. Maybe how clearly you explain the product, or whether you speak to a customer tomorrow. Choose just one. Now notice something you can't decide for another person: whether they invest, whether they reply, whether they say yes. Let your hands open a little while you sit with the difference."
+          },
+          {
+            "start": 104.582,
+            "end": 132.397,
+            "text": "Come back to the one thing you chose. Picture the first small part of doing it. You can care about the outcome and still make room for an evening, a meal, a full breath. Let the plan wait until this practice ends. Rest your attention on the floor beneath you for a few more moments."
+          }
+        ],
+        "duration": 180.0,
+        "processing": "voice mono 64k, music 96k; mixed live in the app with the listening room duck curve"
+      }
+    },
+    {
+      "voice": "Jerry",
+      "voiceId": "iRItcIx4sdrKJ1k6Ovv7",
+      "model": "eleven_v3",
+      "audition": {
+        "sourceTrack": "r2-01",
+        "start": 7.9,
+        "end": 14.95,
+        "words": "Take a seat, and leave your eyes open if you like. Feel where your feet meet the floor.",
+        "processing": "voice stem only, loudnorm I=-19 TP=-2, 0.12s/0.55s fades, mono 96k"
+      },
+      "session": {
+        "sourceTrack": "r2-01",
+        "title": "Ground under you",
+        "music": "Warm felt piano, soft analog air",
+        "ratings": {
+          "voice": "good",
+          "delivery": "good"
+        },
+        "savedMix": {
+          "voice": 99,
+          "music": 80,
+          "duck": true
+        },
+        "duckFloor": 0.28,
+        "timeline": [
+          {
+            "start": 8,
+            "end": 36.24,
+            "text": "Take a seat, and leave your eyes open if you like. Feel where your feet meet the floor. You've moved to San Francisco, money is getting tight, and you're trying to work out whether any of this is working. That's a lot to carry. For the next few minutes, let the chair take some of your weight. Look around and find one ordinary object. Notice its shape."
+          },
+          {
+            "start": 48.24,
+            "end": 74.48,
+            "text": "Now notice a sound in the room, or outside it. Let it come to you. Feel the contact beneath your heels. There's no special way to breathe. When the thought about funding comes back, you can notice it, then return to the pressure under your feet. Try that a few times. I'll leave you some space."
+          },
+          {
+            "start": 96.48,
+            "end": 126.96,
+            "text": "Notice where you are again. The room. Your hands. The ground. You may still feel worried, and that's okay. After this, you can look at the practical problem with your eyes open. For now, choose one small thing that would help you through the next hour. A meal, a walk, or a conversation with someone you trust. Take your time before you move."
+          }
+        ],
+        "duration": 180.0,
+        "processing": "voice mono 64k, music 96k; mixed live in the app with the listening room duck curve"
+      }
+    }
+  ]
+}

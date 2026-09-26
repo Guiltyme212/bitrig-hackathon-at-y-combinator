@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kokoro Duo preview</title>
+<style>
+  *{box-sizing:border-box}body{margin:0;background:#111;color:#f5f5f5;font:14px -apple-system,BlinkMacSystemFont,sans-serif}
+  header{padding:18px 24px;border-bottom:1px solid #303033;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  h1{font-size:17px;margin:0 12px 0 0}nav{display:flex;gap:6px;flex-wrap:wrap}button,a{font:inherit}
+  button{border:1px solid #444;border-radius:9px;color:inherit;background:#222;padding:9px 13px;cursor:pointer}
+  button[aria-pressed=true]{background:#eae8e2;color:#111;border-color:#eae8e2}button:focus-visible,a:focus-visible{outline:2px solid #9bbcff;outline-offset:3px}
+  p{margin:8px 24px;color:#aaa;font-size:12px;line-height:1.5}a{color:#c4d5f7}main{padding:20px;overflow:auto;display:grid;justify-items:center}
+  iframe{border:1px solid #303033;border-radius:18px;background:#000;display:block;flex:none;max-width:none}
+  #size{font-variant-numeric:tabular-nums;color:#aaa;margin-left:auto}
+</style>
+<header><h1>Kokoro Duo</h1><nav aria-label="Device pose">
+  <button data-pose="closed" aria-pressed="false">Closed</button>
+  <button data-pose="openLandscape" aria-pressed="true">Unfold</button>
+  <button data-pose="openPortrait" aria-pressed="false">Portrait</button>
+  <button data-pose="closedLandscape" aria-pressed="false">Closed landscape</button>
+  <button data-pose="phone" aria-pressed="false">Normal iPhone</button>
+</nav><span id="size">951 × 669</span></header>
+<p>Browser layout check. Pose buttons keep the same app session. Uses bundled demo audio; live generation and purchases are off. Native hinge movement and device audio still need device testing. <a href="/?duo=openLandscape" target="_blank" rel="noopener">Open with live services</a></p>
+<main><iframe id="app" title="Kokoro app" width="951" height="669" src="/?duo=openLandscape&amp;qa=1&amp;offline=1" allow="autoplay"></iframe></main>
+<script>
+  const sizes={closed:[466,678],openLandscape:[951,669],openPortrait:[669,951],closedLandscape:[678,466],phone:[402,874]};
+  const app=document.getElementById('app');
+  document.querySelectorAll('[data-pose]').forEach(button=>button.addEventListener('click',()=>{
+    const pose=button.dataset.pose,[w,h]=sizes[pose];
+    app.width=w;app.height=h;
+    app.contentWindow.postMessage({type:'kokoro:preview-pose',pose},location.origin);
+    document.querySelectorAll('[data-pose]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    document.getElementById('size').textContent=`${w} × ${h}`;
+  }));
+</script>
+</html>
