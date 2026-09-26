@@ -1,0 +1,35 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.mobileprovision
+*.key
+
+# Local notes and caches
+.local/
+.cache/
+.DS_Store
+*.log
+
+# JavaScript / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+coverage/
+
+# Apple builds and editor state
+build/
+DerivedData/
+Pods/
+.build/
+xcuserdata/
+*.xcuserstate
+
+# Local agent and editor settings
+.claude/
+.codex/
+.idea/
+.vscode/
